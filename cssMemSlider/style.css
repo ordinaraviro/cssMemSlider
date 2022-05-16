@@ -3,11 +3,17 @@
     padding: 0;
 }
 
+body {
+    background-color: black;
+}
+
 input {
     display: none;
 }
 
 .container {
+    padding: 10vh 0 0 0;
+    height: 70vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -15,12 +21,14 @@ input {
 }
 
 .content {
+    max-width: 1440px;
     width: 80vw;
     overflow: hidden;
 }
 
 .memes {
     display: flex;
+    max-width: calc(1440px * 4);
     width: 320vw;
     height: 60vh;
     transition: transform 400ms ease-in-out;
@@ -62,14 +70,15 @@ input {
 }
 
 .text-content {
+    max-width: calc(1440px * 0.75);
     width: 60vw;
     overflow: hidden;
 }
 
 .texts {
     display: flex;
+    max-width: calc((1440px * 0.75) * 5);
     width: 240vw;
-
     transition: transform 400ms ease-in-out;
 }
 
@@ -81,6 +90,7 @@ input {
     background-position: center;
     background-size: cover;
     border-radius: 1rem;
+    color: aliceblue;
 }
 
 #radio1:checked ~ .content .memes {
@@ -114,6 +124,38 @@ input {
 #radio4:checked ~ .text-content .texts {
     transform: translateX(-75%);
 }
+
+.nav {
+    display: flex;
+    gap: 0.1rem;
+}
+
+.btn {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    transition: 400ms;
+    background-color: transparent;
+}
+
+.radio-btn {
+    display: block;
+    margin: 0.4rem;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid cornflowerblue;
+    background-color: cornflowerblue;
+    transition: 400ms;
+}
+
+.btn:hover .radio-btn {
+    border: 2px solid white;
+    background-color: white;
+}
+
+
+
 
 
 
