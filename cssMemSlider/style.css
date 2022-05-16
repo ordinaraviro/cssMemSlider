@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #999999;
+}
+
+input {
+    display: none;
+}
+
+.container {
+    border-radius: 1%;
+    margin: 3vw auto;
+    height: 60vw;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+}
+
+.content {
+    width: 70vw;
+    height: 40vw;
+    overflow: hidden;
+}
+
+.memes {
+    display: flex;
+    width: 280vw;
+    height: 40vw;
+    transition: transform 400ms ease-in-out;
+}
+
+.meme {
+    width: 70vw;
+    height: 40vw;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.meme-1 {
+    background-image: url(./assets/witchcraft.gif);
+}
+
+.meme-2 {
+    background-image: url(./assets/wait.gif);
+}
+
+.meme-3 {
+    background-image: url(./assets/oldbob.jpg);
+}
+
+.meme-4 {
+    background-image: url(./assets/boromir.jpg);
+}
+
+
+.nav {
+    width: 15vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-content {
+    width: 55vw;
+    overflow: hidden;
+}
+
+.texts {
+    display: flex;
+    align-items: center;
+    width: 220vw;
+    transition: transform 400ms ease-in-out;
+}
+
+.text {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    color: #ffc700;
+    font-size: 1rem;
+}
+
+#radio1:checked ~ .content .memes {
+    transform: translateX(0);
+}
+
+#radio2:checked ~ .content .memes {
+    transform: translateX(-25%);
+}
+
+#radio3:checked ~ .content .memes {
+    transform: translateX(-50%);
+}
+
+#radio4:checked ~ .content .memes {
+    transform: translateX(-75%);
+}
+
+#radio1:checked ~ .text-content .texts {
+    transform: translateX(0);
+}
+
+#radio2:checked ~ .text-content .texts {
+    transform: translateX(-25%);
+}
+
+#radio3:checked ~ .text-content .texts {
+    transform: translateX(-50%);
+}
+
+#radio4:checked ~ .text-content .texts {
+    transform: translateX(-75%);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 400ms;
+    background-color: transparent;
+}
+
+.btn1, .btn2, .btn3, .btn4 {
+    display: inherit;
+}
+
+.radio-btn {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid cornflowerblue;
+    background-color: cornflowerblue;
+    transition: 400ms;
+}
+
+.btn:hover .radio-btn {
+    border: 2px solid white;
+    background-color: white;
+}
+
+#radio1:checked ~ .nav .btn .btn1 {
+    background-color: transparent;
+}
+
+#radio2:checked ~ .nav .btn .btn2 {
+    background-color: transparent;
+}
+
+#radio3:checked ~ .nav .btn .btn3 {
+    background-color: transparent;
+}
+
+#radio4:checked ~ .nav .btn .btn4 {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        row-gap: 1rem;
+        min-height: 375px;
+    }
+
+    .content {
+        order: 0;
+    }
+
+    .nav {
+        order: 1;
+    }
+
+    .text-content {
+        order: 2;
+        align-self: baseline;
+        margin: 0 0 0 5vw;
+    }
+
+    .btn {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    .radio-btn {
+        width: 2.5vw;
+        height: 2.5vw;
+        border: 2px solid cornflowerblue;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        margin: 30px auto;
+        width: 1200px;
+        height: 900px;
+    }
+
+    .content {
+        width: 1050px;
+        height: 600px;
+    }
+
+    .memes {
+        width: 4200px;
+        height: 600px;
+    }
+    
+    .meme {
+        width: 1050px;
+        height: 600px;
+        display: block;
+    }
+    
+    .nav {
+        width: 220px;
+    }
+
+    .text-content {
+        width: 825px;
+    }
+    
+    .texts {
+        width: 3300px;
+    }
+}
+
+
+
+
+
+
+
