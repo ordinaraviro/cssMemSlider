@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 80vw;
+    overflow: hidden;
+}
+
+.memes {
+    display: flex;
+    width: 320vw;
+    height: 60vh;
+    transition: transform 400ms ease-in-out;
+}
+
+.meme {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.meme-1 {
+    background-image: url(./assets/witchcraft.gif);
+}
+
+.meme-2 {
+    background-image: url(./assets/wait.gif);
+}
+
+.meme-3 {
+    background-image: url(./assets/oldbob.jpg);
+}
+
+.meme-4 {
+    background-image: url(./assets/boromir.jpg);
+}
+
+
+.nav {
+    width: 18vw;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-content {
+    width: 60vw;
+    overflow: hidden;
+}
+
+.texts {
+    display: flex;
+    width: 240vw;
+
+    transition: transform 400ms ease-in-out;
+}
+
+.text {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+#radio1:checked ~ .content .memes {
+    transform: translateX(0);
+}
+
+#radio2:checked ~ .content .memes {
+    transform: translateX(-25%);
+}
+
+#radio3:checked ~ .content .memes {
+    transform: translateX(-50%);
+}
+
+#radio4:checked ~ .content .memes{
+    transform: translateX(-75%);
+}
+
+#radio1:checked ~ .text-content .texts {
+    transform: translateX(0);
+}
+
+#radio2:checked ~ .text-content .texts {
+    transform: translateX(-25%);
+}
+
+#radio3:checked ~ .text-content .texts {
+    transform: translateX(-50%);
+}
+
+#radio4:checked ~ .text-content .texts {
+    transform: translateX(-75%);
+}
+
+
+
+
+
+
+
+
