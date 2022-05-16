@@ -14,7 +14,7 @@ input {
 
 .container {
     border-radius: 1%;
-    margin: 10vw auto;
+    margin: 3vw auto;
     height: 60vw;
     width: 80vw;
     display: flex;
@@ -174,8 +174,84 @@ input {
     background-color: transparent;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        row-gap: 1rem;
+        min-height: 375px;
+    }
 
+    .content {
+        order: 0;
+    }
 
+    .nav {
+        order: 1;
+    }
+
+    .text-content {
+        order: 2;
+        align-self: baseline;
+        margin: 0 0 0 5vw;
+    }
+
+    .btn {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    .radio-btn {
+        width: 2.5vw;
+        height: 2.5vw;
+        border: 2px solid cornflowerblue;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        margin: 30px auto;
+        width: 1200px;
+        height: 900px;
+    }
+
+    .content {
+        width: 1050px;
+        height: 600px;
+    }
+
+    .memes {
+        width: 4200px;
+        height: 600px;
+    }
+    
+    .meme {
+        width: 1050px;
+        height: 600px;
+        display: block;
+    }
+    
+    .nav {
+        width: 220px;
+    }
+
+    .text-content {
+        width: 825px;
+    }
+    
+    .texts {
+        width: 3300px;
+    }
+}
 
 
 
